@@ -12,14 +12,15 @@ provider "google" {
   region      = var.region
 }
 
-resource "google_folder" "ccrkt" {
-  display_name = "cloudcricket"
-  parent       = "folders/0"
-}
+# # GCP does not allow for the creation of folders at root with no organisational resource
+# resource "google_folder" "ccrkt" {
+#   display_name = "cloudcricket"
+#   parent       = "folders/0"
+# }
 
 resource "google_project" "prj_ccrkt" {
   name            = "prj-cloudcricket-${var.env}-0"
   project_id      = "prj-cloudcricket-${var.env}-0"
-  folder_id       = google_folder.ccrkt.name
+  folder_id       = "folders/0"
   billing_account = var.billing_account
 }
