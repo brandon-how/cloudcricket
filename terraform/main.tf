@@ -19,8 +19,8 @@ provider "google" {
 # }
 
 resource "google_project" "prj_ccrkt" {
-  name            = "prj-cloudcricket-${var.env}-0"
-  project_id      = "prj-cloudcricket-${var.env}-0"
-  folder_id       = "folders/0"
+  name       = "prj-cloudcricket-${var.env}-0"
+  project_id = "prj-cloudcricket-${var.env}-0"
+  # folder_id       = "folders/0"
   billing_account = var.billing_account
 }
