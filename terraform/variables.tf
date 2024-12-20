@@ -3,10 +3,10 @@ variable "env" {
   type        = string
 }
 
-variable "folder_cloudcricket" {
-  description = "The ID for the GCP folder for the `cloudcricket` project"
-  type        = string
-}
+# variable "folder_cloudcricket" {
+#   description = "The ID for the GCP folder for the `cloudcricket` project"
+#   type        = string
+# }
 
 variable "billing_account" {
   description = "The GCP Billing account for the folder"
